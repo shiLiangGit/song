@@ -1,0 +1,6 @@
+<view class="container">
+   <image src="../img/rc_bg.png" class="cservice_bg"></image>
+   <navigator hover-class="none" class="admission_btn" url='../index/index'></navigator>
+</view>
+
+

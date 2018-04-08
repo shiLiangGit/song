@@ -1,0 +1,56 @@
+/**index.wxss**/
+.index_box{ width: 90%; height: 950rpx; background: #fff; margin: 90rpx auto; position: relative;
+box-shadow: 2px 2px 10px #cccccc;}
+.user_head{width: 150rpx; height: 150rpx;border-radius: 50%; position: absolute; top: -70rpx; left: 50%; margin-left: -75rpx;  background: #fff; overflow: hidden; font-size: 0;}
+.userinfo-avatar{ width: 130rpx; height: 130rpx; border-radius: 50%;  margin: 10rpx;}
+.ly_gf{ width: 90%; margin: 0 auto; padding-top: 105rpx; font-size: 0;} 
+.ly_gf image{ width: 100%; height: 415rpx;} 
+.music_box{ width: 90%; margin: 0rpx auto 40rpx auto;}
+.music_left{ width: 126rpx; height: 126rpx; font-size: 0; margin-right: 8rpx;}
+.music_left image{ width: 100%; height: 100%;}
+.music_right{ width: 75%; font-size: 32rpx; border-bottom: 1px solid #323232; line-height: 150rpx; overflow: hidden; position: relative; height: 126rpx;} 
+.music_right input{ position: absolute; bottom: 0; left: 0; height: 70rpx; line-height: 70rpx; width: 100%; padding-left: 12rpx; box-sizing: border-box;}
+.operation_box{ width: 90%; margin: 0 auto;}
+.operation_box button{ width: 285rpx; height: 82rpx;line-height: 82rpx; padding: 0; color:#fff;border: none;border-radius: 20px;background:red;font-size: 30rpx;}
+.operation_box button.stop{background: #ccc}
+.index_ts{ font-size: 22rpx; text-align: center; font-style:italic; color: #645959; padding-top: 35rpx;}
+.ly_gf{ width: 90%; margin: 50rpx auto 20rpx; font-size: 0; height: 470rpx; position: relative;} 
+.ly_zp{ position: absolute; top: 50%; left: 50%; margin: -160rpx 0 0 -225rpx; width: 470rpx; height: 470rpx;}
+.ly_text{
+  width: 100%;
+  height: 50rpx;
+  text-align: center;
+  display: block;
+  font-size: 30rpx;
+  color:red;
+  position: absolute;
+  bottom:0;
+  top:0;
+  right:0;
+  margin: auto;
+  left:0;
+  z-index: 898989898;
+}
+.ly_zp image.zp_img{ width: 470rpx; height: 470rpx; position: absolute; top: 0; left: 0; z-index: 3;}
+.ly_zp image.user_img{ width: 250rpx; height: 250rpx; position: absolute; top: 50%; left: 50%; margin: -125rpx;border-radius: 50%;}
+.ly_zp image.rotation{
+  -webkit-transform: rotate(360deg);
+animation: rotation 5s linear infinite;
+-moz-animation: rotation 5s linear infinite;
+-webkit-animation: rotation 5s linear infinite;
+-o-animation: rotation 5s linear infinite;
+}
+
+@-webkit-keyframes rotation{
+from {-webkit-transform: rotate(0deg);}
+to {-webkit-transform: rotate(360deg);}
+}
+.ly_video video{
+  width:100%;
+  height:470rpx;
+  margin-bottom: 30rpx;
+}
+.myVideo{
+  width:100%;
+  height: 470rpx;
+}

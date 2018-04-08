@@ -1,0 +1,10 @@
+<view class="container">
+   <image src="../img/cjwt_bg.jpg" class="cservice_bg"></image>
+   <view class="cservice_box">
+        <image src="{{qrCode}}"></image>
+        <text>
+           客服电话：{{tel}}
+        </text>
+        <view>(同微信号)</view>
+   </view>
+</view>

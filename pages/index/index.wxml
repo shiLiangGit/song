@@ -1,0 +1,58 @@
+<view class="container">
+  <view class="index_box">
+    <view class="user_head">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+        <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        </block>
+    </view>
+    <!--录音-->
+       <view class="ly_gf">
+         <view class="ly_zp" wx:if="{{isLuZhi == false && videoPath == ''}}" bindtap='uploadImg'>
+            <image src="../img/zp.png" class="zp_img"></image>
+            <image src="{{picture}}" class="user_img {{round == true ? 'rotation' : ''}}"></image>
+            <text class='ly_text' wx:if="{{picture == ''}}">上传录音封面</text>
+        </view> 
+        <view class="ly_video tc" wx:if="{{isLuZhi == false && videoPath != ''}}">
+          <video src="{{videoPath}}" controls poster="{{thumbVideo}}"></video>
+        </view>
+        <camera id="myVideo" wx:if="{{isLuZhi}}" class='myVideo' device-position="back" flash="off" binderror="error"></camera>
+    </view>
+     
+    <view class="music_box clear">
+       <view class="music_left fl">
+            <image src="{{logo}}"></image>
+       </view>
+       <view class="music_right fr">
+          <input placeholder="请输入歌曲名称" value="{{songName}}" placeholder-class="placeholder" bindinput="setSong"></input>
+       </view>
+    </view>
+    <view class="operation_box clear">
+          <button class="fl {{audioStatus == true ? '' : 'stop'}}" bindtap='startAudio'>
+              {{audioStatus == true ? "开始录音" : "剩余 " + audioTime +' s'}}
+          </button>
+          <button class="fr {{videoStatus == true ? '' : 'stop'}}" bindtap='startVideo'>
+              {{videoStatus == true ? "开始录像" : "剩余 " + videoTime + ' s'}}
+          </button>
+    </view>
+    <view class="index_ts">
+          录音为3分钟，录像为30秒，录音可上传照片到视频中
+    </view>
+  </view>
+</view>
+<!--底部-->
+<view class="footer">
+    <button hover-class="none" bindtap='playAudio'>
+        <image src="../img/tab_icon1.jpg"></image>
+        {{isPlay ? "试听" : "停止"}}
+    </button>
+     <!-- <navigator hover-class="none" url="../friend/friend">  -->
+     <navigator hover-class="none" url="../record/record">     
+        <image src="../img/tab_icon2.jpg"></image>
+        个人中心
+    </navigator>
+    <button hover-class="none" bindtap='createSong'>
+      <image src="../img/tab_icon3.jpg"></image>
+        生成
+    </button>
+</view>

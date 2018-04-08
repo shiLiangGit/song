@@ -1,0 +1,11 @@
+/* pages/index/friend.wxss */
+.user_head{ width: 180rpx; height: 180rpx; border-radius: 50%; overflow: hidden; margin: 0 auto;}
+.user_head image{ width: 100%; height: 100%;}
+.share_box{ position: fixed; top: 0; left: 0; background: #c90022; width: 100%; height: 100%; z-index: 100;}
+.share{ position: absolute; top: 45%; left: 50%; width: 750rpx; height: 937rpx; transform: translate(-50%,-50%);}
+.share image.share_bg{ width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.share_cont{ position: relative; z-index: 3; padding: 0;}
+.share_gg{ width:600rpx;height:260rpx;margin:60rpx auto 0 auto;}
+.share_gg image,.share_qrcode image{ width: 100%; height: 100%;}
+.share_qrcode{ width:520rpx;height:235rpx;margin:80rpx auto 40rpx auto;}
+.share_text{ font-size: 26rpx; color: #fddeb0; text-align: center; width: 100%; display: block;}

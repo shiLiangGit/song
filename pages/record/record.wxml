@@ -1,0 +1,104 @@
+<view class="container">
+    <view class="page_nav">
+      <view  hover-class="none" class="select">我的记录</view>
+      <view  hover-class="none" bindtap='getCash'>红包提现</view>
+    </view>
+    <view class="page_je">
+        <view class="user_head">
+            <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+            <block wx:else>
+              <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+            </block>
+        </view>
+        <view class="user_name"><text>{{userInfo.nickName}}</text>共收到</view>
+        <view class="page_jelist clear">
+            <view class="page_jeitem1">
+                <view>红包(个)</view>
+                <text>{{userData.total_count}}</text>
+            </view>
+            <view class="page_jeitem2">
+                <view>获赏总额(元)</view>
+                <text>{{userData.total_credit2}}</text>
+            </view>
+        </view>
+        <view class="page_userlist">
+            <view class="page_useritem" wx:for="{{userData.list}}" wx:for-index="idx" wx:for-item="item">
+                <view class="page_useritemtop clear">
+                    <text class="fl">{{item.nickName}}</text>
+                    <view class="fr"><text>{{item.credit2}}</text>元</view>
+                </view>
+                <view class="page_useritembottom"><text>{{item.create_time}}</text></view>
+            </view>
+        </view>
+        <view class="page_setting clear">
+           <button class="fl" bindtap='getUpData'>上一页</button>
+           <button class="fr" bindtap='getDownData'>下一页</button>
+        </view>
+        <navigator hover-class="none" class="common_problem" url='../kefu/kefu'>常见问题</navigator>
+    </view>
+</view>
+<!--温馨提示-->
+<!-- <view class="page_txzc page_wxts" wx:if="{{tip}}">
+    <view class="page_txzcbar">
+        <view class="close" bindtap='hideTip'>
+          x
+        </view>
+        <view class="page_txztl">
+            温馨提示
+        </view>
+        <view class="wxts_txt">
+            正月十五红包雨快来了......2018.3.1日前把'唱唱'每分享给一个好友即可赚1元服务费，多转多赚哦！
+        </view>
+        <button class="pagezc_btn" bindtap='hideTip'>确定</button>
+    </view>
+</view> -->
+<!--提现注册-->
+<view class="page_txzc" wx:if="{{register}}">
+    <view class="page_txzcbar">
+        <view class="close" bindtap='getCash'>
+          x
+        </view>
+        <view class="page_txztl">
+            提现注册
+        </view>
+        <view class="pagezc_input">
+            <text>姓名：</text><input type="text" bindinput='setName'></input>
+        </view>
+        <view class="pagezc_input">
+            <text>手机号：</text><input type="number" maxlength="11" bindinput='setTel'></input>
+        </view>
+        <button class="pagezc_btn" bindtap='toRegister'>注册</button>
+        <text class="pagezc_ts">请正确填写，避免资金出错！</text>
+    </view>
+</view>
+
+<!--常见问题-->
+<view class="common_problempop">
+  <view class="common_problembar">
+    <navigator hover-class="none">分享有礼</navigator>
+    <navigator hover-class="none">我的记录</navigator>
+    <navigator hover-class="none">注册提现</navigator>
+    <navigator hover-class="none">联系客服</navigator>
+    <navigator hover-class="none">取消</navigator>
+  </view>
+</view>
+
+<view class='mask_bg' bindtap='hideTip' wx:if="{{userData.show_redbag == 1}}"></view>
+<view class='red_bag' wx:if="{{userData.show_redbag == 1}}">
+   <!-- <image class='red_animal' src='../img/animal.png'></image>  -->
+  <view class='panel_box'>
+    <image class='red_panel' src='../img/panel.png'></image>
+    <image class='red_avatar' src='{{logo}}'></image>
+    <text class='red_send'>恭喜发财!送你个大红包!</text>
+     <view class='red_btn1'  wx:if="{{!hasGet}}">
+      <view class='red_btn2' bindtap='getBag'>
+        <view class='red_btn3'>拆红包</view>
+      </view>
+    </view> 
+    <view class='red_he' wx:if="{{hasGet}}">
+      <view class='red_gongxi'>恭喜您成功获得红包</view>    
+      <view class='red_money'>{{redBag}}元</view>
+    </view>
+    <text class='red_get'>拆开红包，金额自动转入余额中</text>
+  </view>
+</view>

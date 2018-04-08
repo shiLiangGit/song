@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="red_top">
+    <view class="user_head">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+        <block wx:else>
+          <navigator url='../record/record' class='user_head'>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>          
+          </navigator>
+        </block>
+    </view>
+    <view class="show_songname" wx:if="{{song.detail.title != null}}">
+        {{song.detail.title}}
+    </view>
+    <view class="qrcode">
+        <image src="../img/qrcode.png" class="qrcode_img"></image>
+    </view>
+    <view class="red_img">
+        <image src="../img/red_bg.jpg"></image>
+    </view>
+  </view>
+  <view class="red_bottom">
+     <button class="forward_btn" open-type='share'>转发给好友</button> 
+      <!-- <navigator class="forward_btn" url="../play/play?id=4">转发到好友或群聊</navigator>  -->
+    <button class="share_btn" bindtap='shareFriend'>转发到相册</button>
+    <button hover-class="none" bindtap='navigateBack'>
+        <image src="../img/return.jpg"></image>
+    </button>
+  </view>
+</view>
+

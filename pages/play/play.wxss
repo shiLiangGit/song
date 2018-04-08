@@ -1,0 +1,50 @@
+.container{ background: #fff;}
+.user_box{ height: 200rpx; background: #c90022;}
+.user_head{ width: 120rpx; height: 120rpx; border-radius: 15rpx; overflow: hidden; background: #f7c7ba; margin: 0 auto;}
+.user_head image{ width: 120rpx; height: 120rpx;  border-radius: 15rpx;}
+.user_name{ font-size: 14px; color: #fad3c7; width: 100%; display: block; text-align: center; height: 80rpx; line-height: 80rpx;}
+.page_loading image{ width: 100%; height: 398rpx;}
+.page_red{ width: 412rpx; height: 284rpx; background-size: 100%; position: relative; margin:80rpx auto 0;text-align: center;}
+.page_redicon{ width: 138rpx; height: 148rpx; position: absolute; top: -28rpx; left: -45rpx;}
+.page_rediconr{ width: 173rpx; height: 191rpx; position: absolute; top: -70rpx; right: -95rpx;}
+.page_redicon image,.page_rediconr image,.page_red>image{ width: 100%; height: 100%;}
+.page_red input{ font-size: 48rpx; color: #ffcd55; height: 130rpx; line-height: 130rpx;}
+.page_btn{ font-size: 30rpx; color: #ffcd55; margin-top: -20rpx; position: relative; z-index: 3;}
+.page_red button{ width: 340rpx; height: 75rpx; text-align: center; line-height: 75rpx; font-size: 36rpx; border-radius: 0; background: #ffcd55; color: #ff4448; margin-top: 35rpx;border-radius: 10rpx;}
+.page_red button text{
+  font-size:28rpx;
+}
+.page_btnbox{ width: 535rpx; margin: 35rpx auto;}
+.page_btnbox button{ width: 243rpx; height: 98rpx; line-height: 98rpx; color: #fff; font-size: 34rpx; background: #1aad19;box-shadow: 2px 2px 2px #cccccc;}
+.page_btnbox button.stop{
+  background: #ccc;
+}
+.page_pl{ width: 94%; position: fixed; bottom: 18rpx; height: 58rpx; line-height: 58rpx; background: #dcdcdc; font-size: 32rpx; color: #919191; text-indent: 0.5em; left: 50%; margin-left: -47%;}
+.page_loading image{ width: 100%; height: 300rpx; margin-bottom: 100rpx;}
+.page_red>image{ position: absolute; left: 0; top: 0;}
+
+.ly_gf{ width: 90%; margin: 30rpx auto 60rpx; font-size: 0; height: 400rpx; overflow: hidden; position: relative;} 
+.ly_zp{ position: absolute; top: 50%; left: 50%; margin: -200rpx 0 0 -200rpx; width: 400rpx; height: 400rpx;}
+.ly_zp image.zp_img{ width: 400rpx; height: 400rpx; position: absolute; top: 0; left: 0; z-index: 3;}
+.ly_zp image.user_img{ width: 300rpx; border-radius:50%;height: 300rpx; position: absolute; top: 50%; left: 50%; margin: -150rpx;}
+.ly_zp image.user_img.rotation{
+  -webkit-transform: rotate(360deg);
+animation: rotation 5s linear infinite;
+-moz-animation: rotation 5s linear infinite;
+-webkit-animation: rotation 5s linear infinite;
+-o-animation: rotation 5s linear infinite;
+}
+
+@-webkit-keyframes rotation{
+from {-webkit-transform: rotate(0deg);}
+to {-webkit-transform: rotate(360deg);}
+}
+.ly_video{
+  width:100%;
+  height:400rpx;
+  margin: auto;
+}
+.ly_video video{
+  width:100%;
+  height: 100%;
+}

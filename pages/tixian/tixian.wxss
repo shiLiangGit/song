@@ -1,0 +1,37 @@
+.customer_service{ width: 90%; height: 80rpx; line-height: 80rpx; text-align: right; font-size: 30rpx; color: #415886; margin: 0 auto;}
+.page_box{  width: 90%; height: 635rpx; background: #fff; margin: 0 auto; position: relative;
+box-shadow: 2px 2px 10px #cccccc; border-radius: 2px; overflow: hidden;}
+.common_problem{ text-align: center; font-size: 30rpx; color: #435a87; position: fixed; bottom: 0;left: 0; width: 100%; height: 70rpx; line-height: 70rpx;}
+.page_top{ height: 122rpx; line-height: 122rpx; background: #fcfcfc; font-size: 32rpx; padding-left: 40rpx;}
+.page_top>text{ width: 400rpx; text-align: center; display: inline-block; font-size: 40rpx; color: #8e8e8e;}
+.page_top>text text{ font-size: 30rpx; margin-left: 8rpx; vertical-align: middle; display: inline-block;}
+.page_bottom{ margin: 0 40rpx;}
+.page_tl{ font-size: 32rpx; height: 110rpx; line-height: 110rpx;}
+.page_tl .keti{ width: 400rpx; text-align: center; display: inline-block; font-size: 40rpx; color: #8e8e8e;}
+.page_input{ position: relative; height: 100rpx  ; border-bottom: 1px solid #cfcfcf;}
+.page_input input{ font-size: 36rpx; position: absolute; top: 0; left: 0; width: 100%; padding-left: 7%; box-sizing: border-box;}
+.page_tx{ height: 102rpx; line-height: 102rpx; font-size: 30rpx; color: #8a8a8a;}
+.page_tx text{ display: inline; color: #364e7e;}
+.page_txbtn{ height: 80rpx; line-height: 80rpx; background: #1aad19; color: #fff; font-size: 34rpx;margin-bottom:20rpx}
+.page_ts{ font-size: 28rpx; color: #929292;  text-align: center;}
+.page_ts text{color:red}
+.page_txzc{ position: fixed; top: 0; left: 0; z-index: 100; background: rgba(0,0,0,0.5); width: 100%; height: 100%;}
+.page_txzcbar{ width: 560rpx; height: 490rpx; background: #fff; border-radius: 5px; position: absolute; top:0;left: 0;right: 0;bottom: 0;margin: auto}
+.page_txztl{ text-align: center; height: 94rpx; line-height: 94rpx; font-size: 34rpx; border-bottom: 1px solid #a9deab;}
+.close{ position: absolute; top: 13rpx; left: 40rpx; color: #ababab; font-size: 44rpx;}
+.pagezc_input{ width: 500rpx; border-bottom: 1px solid #eaeaea; padding: 40rpx 0 15rpx 0; margin: 0 auto;}
+.pagezc_input text{ font-size: 32rpx; color: #a9deab; width: 130rpx; text-align: right; display: inline-block;}
+.pagezc_input input{ width: 370rpx; float: right; font-size: 32rpx; height: 45rpx; line-height: 45rpx;}
+.pagezc_btn{ width: 500rpx; height: 80rpx; line-height: 80rpx; background: #1aad19; color: #fff; font-size: 34rpx; margin-top:40rpx;}
+.pagezc_ts{ font-size: 28rpx; color: #c1e7c2; display: block; text-align: center; height: 64rpx; line-height: 64rpx;}
+.wxts_txt{ width: 360rpx; font-size: 32rpx; color: #6d716d; margin: 60rpx auto;}
+
+.common_problem{ text-align: center; font-size: 30rpx; color: #435a87;}
+.common_problempop{ position: fixed; left: 0; bottom: 0; width: 100%; z-index: 99; display: none;}
+.common_problempop navigator{ width: 100%; height: 99rpx; line-height: 99rpx; display: block; text-align: center; background: #f5f5f5; border-bottom: 1px solid #e8e8e8; font-size: 34rpx; color: #030303;}
+.common_problempop navigator:last-child{ margin-top: 12rpx;}
+.common_problembar{ position: absolute; bottom: 0; left: 0; width: 100%; background: #fff;}
+.dogimg{ width: 286rpx; height: 379rpx; margin-top: 40rpx;}
+.redbag{
+  color:red;
+}

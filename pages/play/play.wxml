@@ -1,0 +1,33 @@
+<view class="container">
+    <view class="user_box">
+      <view class="user_head">
+            <image class="userinfo-avatar" src="{{detail.avatarUrl}}" background-size="cover"></image>
+      </view>
+      <text class="user_name">{{detail.nickName}}</text>
+    </view>
+   <!--录音-->
+    <view class="ly_gf">
+        <view class="ly_zp" wx:if="{{detail.type == 0}}">
+            <image src="../img/zp.png" class="zp_img"></image>
+            <image src="{{detail.thumb}}" class="user_img {{round == true ? 'rotation' : ''}}"></image>
+        </view>
+         <view class="ly_video tc" wx:if="{{detail.type == 1}}">
+          <video src="{{detail.url}}" controls poster="{{detail.thumb}}"></video>
+        </view>
+    </view>
+    <view class="page_red">
+        <image src="../img/hb.jpg"></image>
+        <view class="page_redicon"><image src="../img/hb_icon.png"></image></view>
+        <view class="page_rediconr"><image src="../img/dog_icon.png"></image></view>
+        <input value="{{site.give_money}}" type="number" cursor-spacing="80" bindinput='setMoney'></input>
+        <view class="page_btn">修改金额(元)</view>
+        <button bindtap='payMoney'>打赏<text>（最高200元）</text></button>
+    </view>
+    <view class="page_btnbox">
+        <button class="fl {{isPlay ?'stop':''}}" bindtap='playAudio' disabled='{{detail.type == 1 || detail.url == ""}}'>
+        {{!isPlay ? "播放" : "停止"}}
+        </button>
+        <button class="fr" open-type="share">转发</button>
+    </view>
+    <!-- <navigator hover-class="none" class="page_pl">评论</navigator> -->
+</view>

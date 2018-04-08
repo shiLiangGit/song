@@ -1,0 +1,37 @@
+<view class="container">
+    <navigator hover-class="none" class="customer_service" url='../kefu/kefu'>
+        联系客服
+    </navigator>
+    <view class="page_box">
+        <view class="page_top">
+            账户总余额<text>{{yuEr.member.credit2 + yuEr.member.credit3}}<text>元 <text class='redbag'>（红包 {{yuEr.member.credit3}}元）</text></text></text>
+        </view>
+        <view class="page_bottom">
+            <view class="page_tl">
+                可提现金额<text class='keti'>{{yuEr.member.credit2}}<text>元</text></text>
+            </view>
+            <view class="page_input">
+                ￥<input type="number" bindinput='setMoney' cursor-spacing="80" value='{{money}}' placeholder='请输入提现金额'></input>
+            </view>
+            <view class="page_tx">
+                提现到微信钱包，<text hover-class="none" bindtap='allTiXian'>全部提现</text>
+            </view>
+            <button class="page_txbtn" bindtap='tiXian' disabled="{{money <= 0}}">提现</button>
+            <view class="page_ts">提现收取<text> {{yuEr.fee}}% </text>的服务费</view>
+            <view class="page_ts">小程序所赠金额仅可抵扣服务费</view>
+        </view>
+    </view>
+    <image src="../img/dog_icon2.png" class="fr dogimg"></image>
+</view>
+<navigator hover-class="none" class="common_problem" url='../kefu/kefu'>常见问题</navigator>
+
+<!--常见问题-->
+<view class="common_problempop">
+  <view class="common_problembar">
+    <navigator hover-class="none">分享有礼</navigator>
+    <navigator hover-class="none">我的记录</navigator>
+    <navigator hover-class="none">注册提现</navigator>
+    <navigator hover-class="none">联系客服</navigator>
+    <navigator hover-class="none">取消</navigator>
+  </view>
+</view>

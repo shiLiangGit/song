@@ -1,0 +1,3 @@
+.cservice_bg{ position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.admission_btn{ position: absolute; bottom: 14%; height: 90rpx; width: 56%; left: 50%; margin-left: -28%;}
+
